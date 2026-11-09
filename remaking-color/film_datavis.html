@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Remaking Color: Color Wall</title>
+<meta name="description" content="Every remake pair as two strips of color, then and now. Click a pair to open it.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter+Tight:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="film_datavis.css">
+</head>
+<body>
+<header class="nav">
+  <a class="brand" href="film_datavis.html">Remaking Color</a>
+  
+</header>
+
+<main>
+  <section class="intro">
+    <div class="kk"><span class="badge" id="badge">01</span><span class="kt" id="kt">THE COLOR STRIPS</span></div>
+    <h1>Then vs. now<span>as color</span></h1>
+    <div class="copy"><p class="how" id="how"></p><div class="stats" id="stat"></div></div>
+  </section>
+  <div class="bar" id="bar">
+    <div class="row2">
+      <div class="fwrap"><button class="fbtn" id="fbtn" aria-haspopup="true" aria-expanded="false">Filter: <b id="fcur">Timeline</b> <span aria-hidden="true">▾</span></button><div class="fmenu" id="fmenu" role="menu" hidden></div></div>
+      <label>Genre <select id="genre"></select></label><label>Search <input id="q" type="search" placeholder="Title or year" autocomplete="off" spellcheck="false"></label>
+      <div class="seg" id="view" role="group" aria-label="View"><button data-view="strips" aria-pressed="true">Color strips</button><button data-view="wall" aria-pressed="false">Poster wall</button></div>
+      <span class="cnt" id="cnt"></span>
+    </div>
+  </div>
+  <div class="rows" id="rows"></div>
+</main>
+<footer class="datafoot">Data collected from the Hugging Face dataset skvarre/movie_posters-100k (poster images, originally from TMDb) and Wikidata (genres). Colors measured by the author; 53 hand-picked remake pairs.</footer>
+
+<div class="ov" id="ov" hidden><div class="ovin" id="ovin"></div></div>
+<div class="card" id="card" hidden></div>
+<script src="cw-data.js"></script>
+<script src="strips.js"></script>
+<script src="film_datavis.js"></script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+column_or_file,meaning
+posters.csv,One row per downloaded poster (237). Color measurements for each poster image.
+pair_differences.csv,"One row per remake pair (53): average measurements for the original and the remake, and the change (remake minus original). Exact duplicate posters are counted once."
+remake_pairs_to_check.csv,The pair list for you to review. 'relationship' is my judgment; fill in the KEEP? column.
+posters/,"The 237 poster images (500x750, from the Hugging Face dataset skvarre/movie_posters-100k, originally TMDb). For class use; not for redistribution."
+chroma,Color: mean chroma C* of the whole poster (higher = more saturated)
+lightness,Mean lightness L* (0 black to 100 white)
+contrast,Spread of lightness across the poster
+warmth,"Mean b*: above 0 leans yellow/orange, below 0 leans blue"
+whiteness_pct,% of pixels that are pale and nearly colorless
+greyness_pct,% of pixels with almost no color (C* < 5)
+texture,"Edge strength of brightness at 240 px tall (text, logos and detail all raise it)"
+hue_X_Y_pct,% of the poster's color in that hue band (degrees in CIELAB)
+palette_N_hex / _pct,Nth most common color on the poster and the % of pixels it covers
+duplicate_of,Filled in when this file is an exact copy of another poster for the same film
+poster_number_for_film,Which of the film's (up to 3) entries in the dataset this is
+Whole poster measured,"Posters include titles, credits and logos; those are measured too, not removed"
