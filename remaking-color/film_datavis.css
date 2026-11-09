@@ -185,3 +185,9 @@ main { padding-top: var(--nav); }
 
 /* film_copy: choreographed view switch. No row sliding or blanket fade; wall rules no longer force styles with !important */
 .rows.morphing .r > * { animation: none; }
+
+/* poster wall: posters on top and aligned across each row; names below them (a wrapped name can no longer push its posters down) */
+.rows.wall .r { display: flex; flex-direction: column; }
+.rows.wall .r .sg { order: 1; }
+.rows.wall .r .lab { order: 2; margin-top: 12px; }
+.rows.wall .r { align-items: stretch; }
